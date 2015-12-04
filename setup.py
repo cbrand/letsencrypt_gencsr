@@ -19,12 +19,11 @@ setup(
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 2 :: Only",
         "Programming Language :: Python :: 2.7",
-        "Framework :: Flask",
         "Topic :: System :: Networking",
     ],
     author='Christoph Brand',
     author_email='christoph@brand.rest',
-    keywords=['vpn', 'network', 'ip'],
+    keywords=['network', 'letsencrypt', 'ssl'],
     packages=find_packages('src'),  # include all packages under src
     package_dir={'': 'src'},  # tell distutils packages are under src
     namespace_packages=[],
