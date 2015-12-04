@@ -29,4 +29,5 @@ letsencrypt certonly --csr request.csr --webroot --renew-by-default --agree-tos 
 
 ## License ##
 
-The application is licensed under the MIT license.
+The application is licensed under the [MIT license](http://opensource.org/licenses/MIT). The used
+letsencrypt library is licensed under the [Apache 2.0 license](http://opensource.org/licenses/apache-2.0).
