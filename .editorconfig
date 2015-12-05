@@ -1,0 +1,16 @@
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+# 4 space indentation
+[*.py, *.in]
+indent_style = space
+indent_size = 4
+
+# Tab indentation (no size specified)
+[{Makefile, *.md, *.txt, *.cfg}]
+indent_style = tab
