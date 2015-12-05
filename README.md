@@ -27,6 +27,20 @@ the --csr flag:
 letsencrypt certonly --csr request.csr --webroot --renew-by-default --agree-tos -w /var/www
 ```
 
+## Letsencrypt proxy ##
+
+As of Version 0.2.0 the `letsencrypt-gencsr-helper` acts as a proxy of the `letsencrypt` cli interface and has the
+same commands.
+
+This is done to support the additional `--private-key` parameter. It allows to feed a pre defined private key to the
+`certonly` certificate request:
+
+```
+letsencrypt-gencsr-helper certonly --private-key privatekey.pem --webroot -w /var/www -d example.com
+```
+
+Of course the same functionality also works with the `run` command.
+
 ## License ##
 
 The application is licensed under the [MIT license](http://opensource.org/licenses/MIT). The used
