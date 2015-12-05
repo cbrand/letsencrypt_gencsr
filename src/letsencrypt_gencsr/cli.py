@@ -1,13 +1,11 @@
 # -*- encoding: utf-8 -*-
 
 from __future__ import unicode_literals, absolute_import
-
 import argparse
 import atexit
 import functools
 import json
 import sys
-
 import letsencrypt
 import os
 import zope.component
@@ -34,14 +32,16 @@ from letsencrypt.cli import (
 from letsencrypt.display import util as display_util
 from letsencrypt.plugins import disco as plugins_disco
 from .cmd.gencsr import gencsr
-
-from letsencrypt_gencsr.cmd.obtain_cert import obtain_cert
+from .cmd.run import run
+from .cmd.obtain_cert import obtain_cert
 
 ARGUMENT_PARSER_VERBS = OriginalHelpfulArgumentParser.VERBS.copy()
 ARGUMENT_PARSER_VERBS.update(
     auth=obtain_cert,
     certonly=obtain_cert,
+    everything=run,
     gencsr=gencsr,
+    run=run,
 )
 ARGUMENT_HELP_TOPICS = OriginalHelpfulArgumentParser.HELP_TOPICS[:]
 ARGUMENT_HELP_TOPICS = ARGUMENT_HELP_TOPICS + [
