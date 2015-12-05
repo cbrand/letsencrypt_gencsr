@@ -10,7 +10,7 @@ def gencsr(args, config, plugins):
     if not args.private_key:
         print('The given key argument does not point to a file.')
 
-    key = args.private_key[1]
+    key = Key(*args.private_key)
 
     init_save_csr(
         key,
